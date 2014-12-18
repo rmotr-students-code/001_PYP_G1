@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/JavaScript">
+
+        function timedRefresh(timeoutPeriod) {
+	        setTimeout("location.reload(true);",timeoutPeriod);
+        }
+        </script>
+        
+    </head>
+    
+    <body onload="JavaScript:timedRefresh(50);">
+        <!-- pre>
+        <script>
+            document.write(Math.random());
+        </script>
+        </pre -->
+        {% for c in content %}
+            <li><b>{{c['id']}} {{c['date']}}</b>: {{c['content']}}</li>
+        {% endfor %}
+    </body>
+    
+    
+</html>

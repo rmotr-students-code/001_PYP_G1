@@ -1,0 +1,8 @@
+<html>
+    <h1>This is the list of countries:</h1>
+    <ul>
+        {% for c in countries %}
+        <li><b>{{c['id']}}</b>: {{c['name']}}</li>
+        {% endfor %}
+    </ul>
+</html>

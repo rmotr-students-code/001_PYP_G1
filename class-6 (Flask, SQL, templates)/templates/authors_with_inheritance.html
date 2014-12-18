@@ -1,0 +1,13 @@
+{% extends "bare.html" %}
+
+{% block content %}
+    <ul>
+        {% for a in authors %}
+            {% if a['id'] > 2 %}
+            <li>{{a['id']}}: {{a['name']}}</li>
+            {% else %}
+            <li><b>{{a['id']}}: {{a['name']}}</b></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endblock %}

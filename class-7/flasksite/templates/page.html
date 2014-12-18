@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>D&D</title>
+        <!--<link rel="stylesheet" href="styles.css" type="text/css" />-->
+        
+        <script type="text/JavaScript">
+
+        function timedRefresh(timeoutPeriod) {
+	        setTimeout("location.reload(true);",timeoutPeriod);
+        }
+        </script>
+        
+    </head>
+    
+    <!-- body onload="JavaScript:timedRefresh(5000);" -->
+    <h1>D&D club posts</h1>
+    
+    {% for c in content %}
+        <li><b>{{c['id']}}</b>: {{c['content']}}</li>
+    {% endfor %}
+    
+    <form role="form" method="POST" action="">
+        Post new:<br />
+        <textarea name="content" id="content"></textarea><br />
+	    <button type="submit" class="btn btn-default">Submit</button>
+	</form>
+	
+	<!-- /body -->
+    
+</html>
